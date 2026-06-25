@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>九博体育 · 稳定入口与产品说明</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f9f7f3;
+            font-family: 'Georgia', 'Times New Roman', '宋体', serif;
+            color: #2d2a24;
+            line-height: 1.75;
+            padding: 2rem 1rem;
+        }
+
+        .page {
+            max-width: 880px;
+            margin: 0 auto;
+            background: #fefcf8;
+            padding: 2.5rem 2.2rem;
+            border-radius: 4px;
+            box-shadow: 0 1px 8px rgba(0,0,0,0.04);
+            border: 1px solid #e9e4da;
+        }
+
+        h1, h2, h3 {
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            color: #2b2620;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            border-left: 6px solid #b7a68b;
+            padding-left: 1.1rem;
+            margin-bottom: 0.8rem;
+            line-height: 1.3;
+        }
+
+        .subhead {
+            font-size: 1rem;
+            color: #6b6459;
+            margin-bottom: 1.8rem;
+            font-style: italic;
+            padding-left: 1.7rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-top: 2.6rem;
+            margin-bottom: 1rem;
+            border-bottom: 1px dashed #d6cfc2;
+            padding-bottom: 0.4rem;
+        }
+
+        h3 {
+            font-size: 1.15rem;
+            margin: 1.8rem 0 0.6rem;
+            color: #4f483e;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        a {
+            color: #6f5c42;
+            border-bottom: 1px dotted #b7a68b;
+            text-decoration: none;
+            transition: border 0.2s, color 0.2s;
+        }
+
+        a:hover {
+            color: #8b7553;
+            border-bottom: 1px solid #8b7553;
+        }
+
+        .inline-link {
+            /* 用于句子内自然嵌入的链接，无需额外修饰 */
+        }
+
+        .hero-quote {
+            background: #f4f0e9;
+            border-left: 5px solid #c2b29b;
+            padding: 1.2rem 1.8rem;
+            margin: 2rem 0 1.5rem;
+            border-radius: 0 8px 8px 0;
+            font-family: 'Georgia', serif;
+            font-style: normal;
+            color: #3d372f;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+        }
+
+        .hero-quote p {
+            margin-bottom: 0.4rem;
+        }
+
+        .hero-quote .source {
+            font-size: 0.9rem;
+            color: #7c7569;
+            text-align: right;
+            margin-top: 0.4rem;
+            font-style: italic;
+        }
+
+        .card-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.8rem;
+            margin: 1.8rem 0;
+        }
+
+        .card {
+            flex: 1 1 200px;
+            background: #fcfaf6;
+            border: 1px solid #e5ded3;
+            border-radius: 6px;
+            padding: 1.4rem 1.2rem;
+            transition: box-shadow 0.15s;
+        }
+
+        .card:hover {
+            box-shadow: 0 4px 14px rgba(0,0,0,0.04);
+        }
+
+        .card h3 {
+            margin-top: 0;
+            border-bottom: 1px solid #e0d8cb;
+            padding-bottom: 0.25rem;
+            font-weight: 500;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            margin-bottom: 0;
+            text-align: left;
+        }
+
+        .tip-box {
+            background: #f6f2ea;
+            border: 1px solid #ddd5c8;
+            border-radius: 6px;
+            padding: 1.2rem 1.6rem;
+            margin: 1.8rem 0;
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .tip-box .icon {
+            font-size: 1.6rem;
+            line-height: 1;
+            color: #b09a7b;
+            flex-shrink: 0;
+        }
+
+        .tip-box .content {
+            flex: 1;
+        }
+
+        .tip-box .content p {
+            margin-bottom: 0.4rem;
+        }
+
+        .faq-item {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #ece6dc;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-q {
+            font-weight: 600;
+            color: #4f483e;
+            margin-bottom: 0.2rem;
+        }
+
+        .faq-a {
+            padding-left: 0.6rem;
+            color: #3b362e;
+            font-size: 0.95rem;
+        }
+
+        .note {
+            font-size: 0.9rem;
+            color: #7b7468;
+            background: #f2efe8;
+            padding: 0.8rem 1.2rem;
+            border-radius: 4px;
+            margin-top: 2rem;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #e0d9cd;
+            margin: 2.2rem 0;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 1rem 0.5rem;
+            }
+            .page {
+                padding: 1.6rem 1.2rem;
+            }
+            h1 {
+                font-size: 1.7rem;
+                padding-left: 0.8rem;
+            }
+            .card-grid {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .tip-box {
+                flex-direction: column;
+                gap: 0.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <h1>九博体育</h1>
+        <div class="subhead">一个持续提供赛事信息聚合与稳定访问路径的产品说明</div>
+
+        <p>
+            <a href="https://official-jiubosports.com" class="inline-link">九博体育</a> 
+            作为一款围绕体育内容与数据整理的服务入口，其设计初衷并非追逐瞬时热度，而是强调在长期使用中保持可依赖的访问方式。  
+            下文从产品摘要、功能特点、适用场景以及访问须知四个维度进行说明，帮助使用者建立清晰、理性的认知。
+        </p>
+
+        <div class="hero-quote">
+            <p>“信息的有效性不仅取决于内容本身，更取决于到达内容的路径是否稳定。九博体育所关注的，正是后者。”</p>
+            <p class="source">—— 产品定位笔记 · 2025</p>
+        </div>
+
+        <h2>一、产品摘要</h2>
+        <p>
+            九博体育并非传统意义上的“即时比分”或“新闻推送”平台，而是一个面向体育内容消费者的导航型聚合页面。  
+            它汇总多个公开体育数据源的索引，提供较为清晰的分组与快速跳转逻辑。使用者可通过 
+            <a href="https://official-jiubosports.com">九博体育</a> 
+            获取指向赛事统计、队伍信息、赛程概览等模块的链接，减少在信息汪洋中反复检索的时间。  
+            该服务本身不产生原始数据，而是充当一个经过筛选的“书架目录”。
+        </p>
+
+        <h2>二、亮点与特点</h2>
+        <div class="card-grid">
+            <div class="card">
+                <h3>定向索引</h3>
+                <p>基于赛事类别与地区划分，提供直接跳转至各联赛、杯赛统计页面的快捷方式，避免多层菜单干扰。</p>
+            </div>
+            <div class="card">
+                <h3>轻量结构</h3>
+                <p>页面无冗余脚本与自动播放内容，访问时加载迅速，适合网络环境一般或对页面简洁度有要求的用户。</p>
+            </div>
+            <div class="card">
+                <h3>可复访入口</h3>
+                <p>通过固定域名 
+                    <a href="https://official-jiubosports.com">九博体育</a> 
+                    保持入口一致性，降低因书签失效或搜索引擎结果变动带来的中断风险。
+                </p>
+            </div>
+        </div>
+
+        <h2>三、使用建议</h2>
+        <p>
+            建议将 <a href="https://official-jiubosports.com">九博体育</a> 
+            作为日常体育信息浏览的<strong>起始页</strong>之一：先通过该页面确定感兴趣的数据源方向，再跳转至对应页面获取详细内容。  
+            对于经常关注特定联赛或队伍的使用者，可善用页面内提供的归类链接，减少重复查找。  
+            另外，由于外部数据源的更新频率与稳定性并非九博体育能控制，当遇到某个链接无法正常加载时，可稍后重试或切换至其他同类索引。
+        </p>
+
+        <div class="tip-box">
+            <div class="icon">ⓘ</div>
+            <div class="content">
+                <p><strong>提示</strong></p>
+                <p>九博体育本身不存储用户的个人信息或浏览记录。页面内不包含登录、注册、支付等交互功能，仅提供信息索引。若看到要求输入敏感信息的弹窗或表单，请立即关闭并确认当前域名是否为 <code>official-jiubosports.com</code>。</p>
+            </div>
+        </div>
+
+        <h2>四、FAQ 摘要</h2>
+        <div class="faq-item">
+            <div class="faq-q">Q：九博体育是否需要注册或下载应用？</div>
+            <div class="faq-a">A：不需要。该页面为纯静态索引，无需任何账户系统或客户端。直接通过浏览器打开 <a href="https://official-jiubosports.com">九博体育</a> 即可使用。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">Q：页面内的链接覆盖哪些体育项目？</div>
+            <div class="faq-a">A：主要涵盖足球、篮球、网球、美式橄榄球与电子竞技等主流项目，具体范围以页面实际展示的分类为准，且会不定期调整优化。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">Q：如果遇到链接失效或页面无法访问，该怎么办？</div>
+            <div class="faq-a">A：可先检查本地网络与 DNS 解析，或尝试更换浏览器/设备。若问题持续存在，说明域名或外部数据源可能临时调整，请耐心等待恢复。</div>
+        </div>
+
+        <hr>
+
+        <p style="font-size: 0.95rem; color: #6b6459;">
+            本文档仅作为产品介绍用途，不构成任何形式的承诺或保证。所有外部数据源的访问均遵循其各自的使用条款。  
+            建议使用者根据自身需求与网络环境，合理利用 
+            <a href="https://official-jiubosports.com">九博体育</a> 
+            所提供的索引功能。
+        </p>
+
+        <div class="note">
+            <span>▶ 稳定入口·理性使用</span>
+        </div>
+    </div>
+</body>
+</html>
